@@ -1,0 +1,12 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "contact_est"
+version = "0.0.1"
+description = "Hidden-contact estimation from fingertip force + vision (Isaac Lab pilot)"
+requires-python = ">=3.10"
+
+[tool.setuptools]
+packages = ["contact_est"]

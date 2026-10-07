@@ -1,0 +1,36 @@
+# ---------------------------------------------------------------- Python / packaging
+__pycache__/
+*.py[cod]
+*.egg-info/
+build/
+dist/
+.ipynb_checkpoints/
+
+# ---------------------------------------------------------------- editors / OS
+.vscode/
+.idea/
+.DS_Store
+
+# ---------------------------------------------------------------- datasets (4.2 GB of HDF5 shards)
+# Regenerate with scripts/collect_dataset.py (see report/10_reproduce.md). Kept: meta.json, collect.log and
+# the dataset report (summary.json + figures), so the collection setup and its statistics stay versioned.
+data/**/*.h5
+data/**/*.h5.tmp
+data/*.log
+
+# ---------------------------------------------------------------- experiment outputs
+# Everything under outputs/ is regenerable (checkpoints, videos, episode.npz, figures, logs, metrics.json).
+# Kept: each run's text results (summary.md / comparison.md / scaling.md) and its config.json.
+# Figures used by the (local, not versioned) report are copied to report/figures/.
+outputs/**
+!outputs/**/
+!outputs/**/summary.md
+!outputs/**/comparison.md
+!outputs/**/scaling.md
+!outputs/**/config.json
+
+# ---------------------------------------------------------------- experiment report (kept local only)
+report/
+
+outputs/
+data/
